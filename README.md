@@ -1,4 +1,4 @@
-# ![VistaProducts Logo](https://via.placeholder.com/150) VistaProducts
+#  VistaProducts
 
 [![React](https://img.shields.io/badge/React-17.0.2-blue?logo=react&logoColor=white)](https://reactjs.org/)  
 ---
