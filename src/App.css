@@ -1,0 +1,233 @@
+.container { max-width: 900px; margin:auto; padding:20px; font-family:sans-serif; }
+h1 { text-align:center; color:#333; }
+.controls { display:flex; justify-content:space-between; margin:20px 0; }
+input { padding:8px; margin-right:10px; width:200px; }
+button { padding:8px 12px; cursor:pointer; }
+
+.product-form { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:20px; }
+.product-form input { flex:1; min-width:150px; }
+.product-form button { flex-basis:100px; }
+
+.list-view .product-card { border:1px solid #ccc; padding:10px; margin-bottom:10px; border-radius:5px; }
+.grid-view { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:15px; }
+.grid-view .product-card { border:1px solid #ccc; padding:10px; border-radius:5px; }
+
+.pagination { display:flex; justify-content:center; align-items:center; gap:10px; margin-top:20px; }
+
+
+
+.product-form h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.product-form .form-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.product-form .form-group {
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-form input,
+.product-form textarea,
+.product-form select {
+  padding: 10px 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #666;
+  background-color: #222;
+  color: #eee;
+  transition: border-color 0.2s ease;
+}
+
+.product-form input::placeholder,
+.product-form textarea::placeholder {
+  color: #aaa;
+}
+
+.product-form input:focus,
+.product-form textarea:focus,
+.product-form select:focus {
+  outline: none;
+  border-color: #0af;
+  background-color: #333;
+  color: #fff;
+}
+
+.submit-btn {
+  margin-top: 1rem;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  background-color: #0af;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+}
+
+.submit-btn:hover {
+  background-color: #0088cc;
+}
+
+.top-controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.search-input {
+  flex-grow: 1;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #666;
+  background-color: #222;
+  color: #eee;
+}
+
+
+
+
+.toggle-view-btn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  background-color: #444;
+  color: #eee;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-view-btn:hover {
+  background-color: #0af;
+}
+
+
+@media (max-width: 600px) {
+  .product-form .form-grid {
+    flex-direction: column;
+  }
+
+  .top-controls {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .toggle-view-btn {
+    width: 100%;
+  }
+}
+
+
+button {
+  background: linear-gradient(135deg, #0af, #005f99);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 95, 153, 0.4);
+  transition: all 0.3s ease;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #0088cc, #003f66);
+  box-shadow: 0 6px 12px rgba(0, 95, 153, 0.6);
+  transform: translateY(-2px);
+}
+
+button:active {
+  background: linear-gradient(135deg, #006699, #002d4d);
+  box-shadow: 0 2px 4px rgba(0, 95, 153, 0.3);
+  transform: translateY(0);
+}
+
+button:focus-visible {
+  outline: 2px solid #0af;
+  outline-offset: 2px;
+}
+
+
+
+.product-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  background: #222;
+  color: #fff;
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+
+
+.product-content {
+  flex: 1;
+}
+
+.product-content h2 {
+  margin-bottom: 8px;
+}
+
+
+.product-content button {
+  margin-right: 10px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.product-content button:first-child {
+  background: #4caf50;
+  color: white;
+}
+
+.delete-btn {
+  background: #e53935;
+  color: white;
+}
+
+
+.product-image {
+  flex: 0 0 180px;   
+  text-align: right;
+}
+
+.product-image img {
+  width: 100%;
+  max-width: 160px;
+  height: auto;
+  object-fit: contain; 
+  border-radius: 8px;
+  background: #fff;
+  padding: 3px;
+}
+
+
+@media (max-width: 768px) {
+  .product-card {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .product-image {
+    text-align: center;
+  }
+}      
